@@ -1,0 +1,6 @@
+### 1.0.0: 2026-09-15
+
+* Every Radarr v3 API operation as a tool
+* Tools generated from Radarr's OpenAPI document
+* Coverage test compares tools against the spec
+* Validation errors report the offending field
