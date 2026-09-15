@@ -3,3 +3,7 @@
 __pycache__/
 *.egg-info/
 uv.lock
+node_modules/
+radarr-mcp.service
+radarr-mcp-auth.service
+radarr-mcp.conf

@@ -86,6 +86,37 @@ claude mcp add radarr -- /path/to/radarr-mcp/.venv/bin/radarr-mcp
 
 Radarr replaces a record on PUT rather than merging, so read it first, change the fields you want and send the whole object back as `body`. For a new resource, `list_*_schema` returns the shape it expects.
 
+## Hosting it
+
+Running it over HTTP puts it in reach of Claude.ai as a custom connector, and of Claude Code on other machines. Three tiers, the same shape the other servers in this family use:
+
+| Tier | Port | What it does |
+| --- | --- | --- |
+| `radarr-mcp` | 8530 | The server. No login of its own, never exposed |
+| nginx | 8531 | Front door, behind a Cloudflare Tunnel |
+| `auth-server.js` | 8532 | OAuth 2.1 sign-in, or a fixed bearer token |
+
+```bash
+npm install
+node set-password.js 'a password for the sign-in page'
+printf 'RADARR_URL=...\n' > ~/.config/radarr-mcp/env
+chmod 600 ~/.config/radarr-mcp/env
+```
+
+Copy `systemd/*.service` into `/etc/systemd/system/`, replacing `YOUR_USER` and the `ISSUER` hostname, then:
+
+```bash
+sudo systemctl enable --now radarr-mcp radarr-mcp-auth
+```
+
+Point `nginx/radarr-mcp.conf` at your own hostname and send the tunnel at `127.0.0.1:8531`.
+
+Environment the server itself reads: `RADARR_URL, RADARR_API_KEY`. The sign-in page carries the Radarr mark and accent colour, set through `APP_NAME`, `APP_ACCENT` and `APP_BLURB` in the auth unit.
+
+### Claude.ai
+
+Settings, Connectors, Add custom connector, URL `https://radarr-mcp.your-domain/mcp`, client ID and secret blank. The sign-in page asks for the password set above. Connectors belong to the account, so adding it once covers mobile too.
+
 ## Development
 
 ```bash
