@@ -143,15 +143,15 @@ def create_exclusions_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def create_history_failed_by_id(id_: int) -> str:
+def create_history_failed_by_id(id: int) -> str:
     """Create History.
 
     POST /api/v3/history/failed/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("POST", f"/api/v3/history/failed/{id_}", query=None, body=None, form=None)
+    return call("POST", f"/api/v3/history/failed/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -432,15 +432,15 @@ def create_queue_grab_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def create_queue_grab_by_id(id_: int) -> str:
+def create_queue_grab_by_id(id: int) -> str:
     """Create QueueAction.
 
     POST /api/v3/queue/grab/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("POST", f"/api/v3/queue/grab/{id_}", query=None, body=None, form=None)
+    return call("POST", f"/api/v3/queue/grab/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -504,15 +504,15 @@ def create_rootfolder(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def create_system_backup_restore_by_id(id_: int) -> str:
+def create_system_backup_restore_by_id(id: int) -> str:
     """Create Backup.
 
     POST /api/v3/system/backup/restore/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("POST", f"/api/v3/system/backup/restore/{id_}", query=None, body=None, form=None)
+    return call("POST", f"/api/v3/system/backup/restore/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -555,19 +555,19 @@ def create_tag(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_autotagging_by_id(id_: int) -> str:
+def delete_autotagging_by_id(id: int) -> str:
     """Delete AutoTagging.
 
     DELETE /api/v3/autotagging/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/autotagging/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/autotagging/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_blocklist_bulk(body: dict) -> str:
+def delete_blocklist_bulk(body: dict | None = None) -> str:
     """Delete Blocklist.
 
     DELETE /api/v3/blocklist/bulk
@@ -579,43 +579,43 @@ def delete_blocklist_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_blocklist_by_id(id_: int) -> str:
+def delete_blocklist_by_id(id: int) -> str:
     """Delete Blocklist.
 
     DELETE /api/v3/blocklist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/blocklist/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/blocklist/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_command_by_id(id_: int) -> str:
+def delete_command_by_id(id: int) -> str:
     """Delete Command.
 
     DELETE /api/v3/command/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/command/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/command/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_customfilter_by_id(id_: int) -> str:
+def delete_customfilter_by_id(id: int) -> str:
     """Delete CustomFilter.
 
     DELETE /api/v3/customfilter/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/customfilter/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/customfilter/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_customformat_bulk(body: dict) -> str:
+def delete_customformat_bulk(body: dict | None = None) -> str:
     """Delete CustomFormat.
 
     DELETE /api/v3/customformat/bulk
@@ -627,31 +627,31 @@ def delete_customformat_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_customformat_by_id(id_: int) -> str:
+def delete_customformat_by_id(id: int) -> str:
     """Delete CustomFormat.
 
     DELETE /api/v3/customformat/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/customformat/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/customformat/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_delayprofile_by_id(id_: int) -> str:
+def delete_delayprofile_by_id(id: int) -> str:
     """Delete DelayProfile.
 
     DELETE /api/v3/delayprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/delayprofile/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/delayprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_downloadclient_bulk(body: dict) -> str:
+def delete_downloadclient_bulk(body: dict | None = None) -> str:
     """Delete DownloadClient.
 
     DELETE /api/v3/downloadclient/bulk
@@ -663,19 +663,19 @@ def delete_downloadclient_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_downloadclient_by_id(id_: int) -> str:
+def delete_downloadclient_by_id(id: int) -> str:
     """Delete DownloadClient.
 
     DELETE /api/v3/downloadclient/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/downloadclient/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/downloadclient/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_exclusions_bulk(body: dict) -> str:
+def delete_exclusions_bulk(body: dict | None = None) -> str:
     """Delete ImportListExclusion.
 
     DELETE /api/v3/exclusions/bulk
@@ -687,19 +687,19 @@ def delete_exclusions_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_exclusions_by_id(id_: int) -> str:
+def delete_exclusions_by_id(id: int) -> str:
     """Delete ImportListExclusion.
 
     DELETE /api/v3/exclusions/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/exclusions/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/exclusions/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_importlist_bulk(body: dict) -> str:
+def delete_importlist_bulk(body: dict | None = None) -> str:
     """Delete ImportList.
 
     DELETE /api/v3/importlist/bulk
@@ -711,19 +711,19 @@ def delete_importlist_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_importlist_by_id(id_: int) -> str:
+def delete_importlist_by_id(id: int) -> str:
     """Delete ImportList.
 
     DELETE /api/v3/importlist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/importlist/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/importlist/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_indexer_bulk(body: dict) -> str:
+def delete_indexer_bulk(body: dict | None = None) -> str:
     """Delete Indexer.
 
     DELETE /api/v3/indexer/bulk
@@ -735,45 +735,45 @@ def delete_indexer_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_indexer_by_id(id_: int) -> str:
+def delete_indexer_by_id(id: int) -> str:
     """Delete Indexer.
 
     DELETE /api/v3/indexer/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/indexer/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/indexer/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_metadata_by_id(id_: int) -> str:
+def delete_metadata_by_id(id: int) -> str:
     """Delete Metadata.
 
     DELETE /api/v3/metadata/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/metadata/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/metadata/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_movie_by_id(id_: int, delete_files: bool | None = None, add_import_exclusion: bool | None = None) -> str:
+def delete_movie_by_id(id: int, delete_files: bool | None = None, add_import_exclusion: bool | None = None) -> str:
     """Delete Movie.
 
     DELETE /api/v3/movie/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         delete_files: Query parameter.
         add_import_exclusion: Query parameter.
     """
-    return call("DELETE", f"/api/v3/movie/{id_}", query={"deleteFiles": delete_files, "addImportExclusion": add_import_exclusion}, body=None, form=None)
+    return call("DELETE", f"/api/v3/movie/{id}", query={"deleteFiles": delete_files, "addImportExclusion": add_import_exclusion}, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_movie_editor(body: dict) -> str:
+def delete_movie_editor(body: dict | None = None) -> str:
     """Delete MovieEditor.
 
     DELETE /api/v3/movie/editor
@@ -785,7 +785,7 @@ def delete_movie_editor(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_moviefile_bulk(body: dict) -> str:
+def delete_moviefile_bulk(body: dict | None = None) -> str:
     """Delete MovieFile.
 
     DELETE /api/v3/moviefile/bulk
@@ -797,43 +797,43 @@ def delete_moviefile_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_moviefile_by_id(id_: int) -> str:
+def delete_moviefile_by_id(id: int) -> str:
     """Delete MovieFile.
 
     DELETE /api/v3/moviefile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/moviefile/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/moviefile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_notification_by_id(id_: int) -> str:
+def delete_notification_by_id(id: int) -> str:
     """Delete Notification.
 
     DELETE /api/v3/notification/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/notification/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/notification/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_qualityprofile_by_id(id_: int) -> str:
+def delete_qualityprofile_by_id(id: int) -> str:
     """Delete QualityProfile.
 
     DELETE /api/v3/qualityprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/qualityprofile/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/qualityprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_queue_bulk(body: dict, remove_from_client: bool | None = None, blocklist: bool | None = None, skip_redownload: bool | None = None, change_category: bool | None = None) -> str:
+def delete_queue_bulk(body: dict | None = None, remove_from_client: bool | None = None, blocklist: bool | None = None, skip_redownload: bool | None = None, change_category: bool | None = None) -> str:
     """Delete Queue.
 
     DELETE /api/v3/queue/bulk
@@ -849,103 +849,103 @@ def delete_queue_bulk(body: dict, remove_from_client: bool | None = None, blockl
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_queue_by_id(id_: int, remove_from_client: bool | None = None, blocklist: bool | None = None, skip_redownload: bool | None = None, change_category: bool | None = None) -> str:
+def delete_queue_by_id(id: int, remove_from_client: bool | None = None, blocklist: bool | None = None, skip_redownload: bool | None = None, change_category: bool | None = None) -> str:
     """Delete Queue.
 
     DELETE /api/v3/queue/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         remove_from_client: Query parameter.
         blocklist: Query parameter.
         skip_redownload: Query parameter.
         change_category: Query parameter.
     """
-    return call("DELETE", f"/api/v3/queue/{id_}", query={"removeFromClient": remove_from_client, "blocklist": blocklist, "skipRedownload": skip_redownload, "changeCategory": change_category}, body=None, form=None)
+    return call("DELETE", f"/api/v3/queue/{id}", query={"removeFromClient": remove_from_client, "blocklist": blocklist, "skipRedownload": skip_redownload, "changeCategory": change_category}, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_releaseprofile_by_id(id_: int) -> str:
+def delete_releaseprofile_by_id(id: int) -> str:
     """Delete ReleaseProfile.
 
     DELETE /api/v3/releaseprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/releaseprofile/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/releaseprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_remotepathmapping_by_id(id_: int) -> str:
+def delete_remotepathmapping_by_id(id: int) -> str:
     """Delete RemotePathMapping.
 
     DELETE /api/v3/remotepathmapping/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/remotepathmapping/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/remotepathmapping/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_rootfolder_by_id(id_: int) -> str:
+def delete_rootfolder_by_id(id: int) -> str:
     """Delete RootFolder.
 
     DELETE /api/v3/rootfolder/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/rootfolder/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/rootfolder/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_system_backup_by_id(id_: int) -> str:
+def delete_system_backup_by_id(id: int) -> str:
     """Delete Backup.
 
     DELETE /api/v3/system/backup/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/system/backup/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/system/backup/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_DESTRUCTIVE)
-def delete_tag_by_id(id_: int) -> str:
+def delete_tag_by_id(id: int) -> str:
     """Delete Tag.
 
     DELETE /api/v3/tag/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("DELETE", f"/api/v3/tag/{id_}", query=None, body=None, form=None)
+    return call("DELETE", f"/api/v3/tag/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_alttitle_by_id(id_: int) -> str:
+def get_alttitle_by_id(id: int) -> str:
     """Read AlternativeTitle.
 
     GET /api/v3/alttitle/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/alttitle/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/alttitle/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_autotagging_by_id(id_: int) -> str:
+def get_autotagging_by_id(id: int) -> str:
     """Read AutoTagging.
 
     GET /api/v3/autotagging/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/autotagging/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/autotagging/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
@@ -961,123 +961,123 @@ def get_by_path(path: str) -> str:
 
 
 @mcp.tool(annotations=_READ)
-def get_collection_by_id(id_: int) -> str:
+def get_collection_by_id(id: int) -> str:
     """Read Collection.
 
     GET /api/v3/collection/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/collection/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/collection/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_command_by_id(id_: int) -> str:
+def get_command_by_id(id: int) -> str:
     """Read Command.
 
     GET /api/v3/command/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/command/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/command/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_downloadclient_by_id(id_: int) -> str:
+def get_config_downloadclient_by_id(id: int) -> str:
     """Read DownloadClientConfig.
 
     GET /api/v3/config/downloadclient/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/downloadclient/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/downloadclient/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_host_by_id(id_: int) -> str:
+def get_config_host_by_id(id: int) -> str:
     """Read HostConfig.
 
     GET /api/v3/config/host/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/host/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/host/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_importlist_by_id(id_: int) -> str:
+def get_config_importlist_by_id(id: int) -> str:
     """Read ImportListConfig.
 
     GET /api/v3/config/importlist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/importlist/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/importlist/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_indexer_by_id(id_: int) -> str:
+def get_config_indexer_by_id(id: int) -> str:
     """Read IndexerConfig.
 
     GET /api/v3/config/indexer/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/indexer/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/indexer/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_mediamanagement_by_id(id_: int) -> str:
+def get_config_mediamanagement_by_id(id: int) -> str:
     """Read MediaManagementConfig.
 
     GET /api/v3/config/mediamanagement/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/mediamanagement/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/mediamanagement/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_metadata_by_id(id_: int) -> str:
+def get_config_metadata_by_id(id: int) -> str:
     """Read MetadataConfig.
 
     GET /api/v3/config/metadata/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/metadata/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/metadata/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_naming_by_id(id_: int) -> str:
+def get_config_naming_by_id(id: int) -> str:
     """Read NamingConfig.
 
     GET /api/v3/config/naming/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/naming/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/naming/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_config_ui_by_id(id_: int) -> str:
+def get_config_ui_by_id(id: int) -> str:
     """Read UiConfig.
 
     GET /api/v3/config/ui/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/config/ui/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/config/ui/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
@@ -1093,111 +1093,111 @@ def get_content_by_path(path: str) -> str:
 
 
 @mcp.tool(annotations=_READ)
-def get_credit_by_id(id_: int) -> str:
+def get_credit_by_id(id: int) -> str:
     """Read Credit.
 
     GET /api/v3/credit/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/credit/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/credit/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_customfilter_by_id(id_: int) -> str:
+def get_customfilter_by_id(id: int) -> str:
     """Read CustomFilter.
 
     GET /api/v3/customfilter/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/customfilter/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/customfilter/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_customformat_by_id(id_: int) -> str:
+def get_customformat_by_id(id: int) -> str:
     """Read CustomFormat.
 
     GET /api/v3/customformat/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/customformat/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/customformat/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_delayprofile_by_id(id_: int) -> str:
+def get_delayprofile_by_id(id: int) -> str:
     """Read DelayProfile.
 
     GET /api/v3/delayprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/delayprofile/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/delayprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_downloadclient_by_id(id_: int) -> str:
+def get_downloadclient_by_id(id: int) -> str:
     """Read DownloadClient.
 
     GET /api/v3/downloadclient/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/downloadclient/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/downloadclient/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_exclusions_by_id(id_: int) -> str:
+def get_exclusions_by_id(id: int) -> str:
     """Read ImportListExclusion.
 
     GET /api/v3/exclusions/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/exclusions/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/exclusions/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_importlist_by_id(id_: int) -> str:
+def get_importlist_by_id(id: int) -> str:
     """Read ImportList.
 
     GET /api/v3/importlist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/importlist/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/importlist/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_indexer_by_id(id_: int) -> str:
+def get_indexer_by_id(id: int) -> str:
     """Read Indexer.
 
     GET /api/v3/indexer/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/indexer/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/indexer/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_language_by_id(id_: int) -> str:
+def get_language_by_id(id: int) -> str:
     """Read Language.
 
     GET /api/v3/language/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/language/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/language/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
@@ -1238,159 +1238,159 @@ def get_mediacover_by_movie_id_by_filename(movie_id: int, filename: str) -> str:
 
 
 @mcp.tool(annotations=_READ)
-def get_metadata_by_id(id_: int) -> str:
+def get_metadata_by_id(id: int) -> str:
     """Read Metadata.
 
     GET /api/v3/metadata/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/metadata/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/metadata/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_movie_by_id(id_: int) -> str:
+def get_movie_by_id(id: int) -> str:
     """Read Movie.
 
     GET /api/v3/movie/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/movie/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/movie/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_movie_by_id_folder(id_: int) -> str:
+def get_movie_by_id_folder(id: int) -> str:
     """Read MovieFolder.
 
     GET /api/v3/movie/{id}/folder
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/movie/{id_}/folder", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/movie/{id}/folder", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_moviefile_by_id(id_: int) -> str:
+def get_moviefile_by_id(id: int) -> str:
     """Read MovieFile.
 
     GET /api/v3/moviefile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/moviefile/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/moviefile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_notification_by_id(id_: int) -> str:
+def get_notification_by_id(id: int) -> str:
     """Read Notification.
 
     GET /api/v3/notification/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/notification/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/notification/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_qualitydefinition_by_id(id_: int) -> str:
+def get_qualitydefinition_by_id(id: int) -> str:
     """Read QualityDefinition.
 
     GET /api/v3/qualitydefinition/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/qualitydefinition/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/qualitydefinition/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_qualityprofile_by_id(id_: int) -> str:
+def get_qualityprofile_by_id(id: int) -> str:
     """Read QualityProfile.
 
     GET /api/v3/qualityprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/qualityprofile/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/qualityprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_releaseprofile_by_id(id_: int) -> str:
+def get_releaseprofile_by_id(id: int) -> str:
     """Read ReleaseProfile.
 
     GET /api/v3/releaseprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/releaseprofile/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/releaseprofile/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_remotepathmapping_by_id(id_: int) -> str:
+def get_remotepathmapping_by_id(id: int) -> str:
     """Read RemotePathMapping.
 
     GET /api/v3/remotepathmapping/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/remotepathmapping/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/remotepathmapping/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_rootfolder_by_id(id_: int) -> str:
+def get_rootfolder_by_id(id: int) -> str:
     """Read RootFolder.
 
     GET /api/v3/rootfolder/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/rootfolder/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/rootfolder/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_system_task_by_id(id_: int) -> str:
+def get_system_task_by_id(id: int) -> str:
     """Read Task.
 
     GET /api/v3/system/task/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/system/task/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/system/task/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_tag_by_id(id_: int) -> str:
+def get_tag_by_id(id: int) -> str:
     """Read Tag.
 
     GET /api/v3/tag/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/tag/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/tag/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
-def get_tag_detail_by_id(id_: int) -> str:
+def get_tag_detail_by_id(id: int) -> str:
     """Read TagDetails.
 
     GET /api/v3/tag/detail/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
     """
-    return call("GET", f"/api/v3/tag/detail/{id_}", query=None, body=None, form=None)
+    return call("GET", f"/api/v3/tag/detail/{id}", query=None, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
@@ -1562,7 +1562,7 @@ def list_config_naming() -> str:
 
 
 @mcp.tool(annotations=_READ)
-def list_config_naming_examples(rename_movies: bool | None = None, replace_illegal_characters: bool | None = None, colon_replacement_format: dict | None = None, standard_movie_format: str | None = None, movie_folder_format: str | None = None, id_: int | None = None, resource_name: str | None = None) -> str:
+def list_config_naming_examples(rename_movies: bool | None = None, replace_illegal_characters: bool | None = None, colon_replacement_format: dict | None = None, standard_movie_format: str | None = None, movie_folder_format: str | None = None, id: int | None = None, resource_name: str | None = None) -> str:
     """Read NamingConfig.
 
     GET /api/v3/config/naming/examples
@@ -1573,10 +1573,10 @@ def list_config_naming_examples(rename_movies: bool | None = None, replace_illeg
         colon_replacement_format: Query parameter.
         standard_movie_format: Query parameter.
         movie_folder_format: Query parameter.
-        id_: Query parameter.
+        id: Query parameter.
         resource_name: Query parameter.
     """
-    return call("GET", "/api/v3/config/naming/examples", query={"renameMovies": rename_movies, "replaceIllegalCharacters": replace_illegal_characters, "colonReplacementFormat": colon_replacement_format, "standardMovieFormat": standard_movie_format, "movieFolderFormat": movie_folder_format, "id": id_, "resourceName": resource_name}, body=None, form=None)
+    return call("GET", "/api/v3/config/naming/examples", query={"renameMovies": rename_movies, "replaceIllegalCharacters": replace_illegal_characters, "colonReplacementFormat": colon_replacement_format, "standardMovieFormat": standard_movie_format, "movieFolderFormat": movie_folder_format, "id": id, "resourceName": resource_name}, body=None, form=None)
 
 
 @mcp.tool(annotations=_READ)
@@ -2333,16 +2333,16 @@ def list_wanted_missing(page: int | None = None, page_size: int | None = None, s
 
 
 @mcp.tool(annotations=_WRITE)
-def update_autotagging_by_id(id_: str, body: dict) -> str:
+def update_autotagging_by_id(id: str, body: dict) -> str:
     """Update AutoTagging.
 
     PUT /api/v3/autotagging/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/autotagging/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/autotagging/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2358,133 +2358,133 @@ def update_collection(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_collection_by_id(id_: str, body: dict) -> str:
+def update_collection_by_id(id: str, body: dict) -> str:
     """Update Collection.
 
     PUT /api/v3/collection/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/collection/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/collection/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_downloadclient_by_id(id_: str, body: dict) -> str:
+def update_config_downloadclient_by_id(id: str, body: dict) -> str:
     """Update DownloadClientConfig.
 
     PUT /api/v3/config/downloadclient/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/downloadclient/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/downloadclient/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_host_by_id(id_: str, body: dict) -> str:
+def update_config_host_by_id(id: str, body: dict) -> str:
     """Update HostConfig.
 
     PUT /api/v3/config/host/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/host/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/host/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_importlist_by_id(id_: str, body: dict) -> str:
+def update_config_importlist_by_id(id: str, body: dict) -> str:
     """Update ImportListConfig.
 
     PUT /api/v3/config/importlist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/importlist/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/importlist/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_indexer_by_id(id_: str, body: dict) -> str:
+def update_config_indexer_by_id(id: str, body: dict) -> str:
     """Update IndexerConfig.
 
     PUT /api/v3/config/indexer/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/indexer/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/indexer/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_mediamanagement_by_id(id_: str, body: dict) -> str:
+def update_config_mediamanagement_by_id(id: str, body: dict) -> str:
     """Update MediaManagementConfig.
 
     PUT /api/v3/config/mediamanagement/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/mediamanagement/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/mediamanagement/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_metadata_by_id(id_: str, body: dict) -> str:
+def update_config_metadata_by_id(id: str, body: dict) -> str:
     """Update MetadataConfig.
 
     PUT /api/v3/config/metadata/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/metadata/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/metadata/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_naming_by_id(id_: str, body: dict) -> str:
+def update_config_naming_by_id(id: str, body: dict) -> str:
     """Update NamingConfig.
 
     PUT /api/v3/config/naming/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/naming/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/naming/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_config_ui_by_id(id_: str, body: dict) -> str:
+def update_config_ui_by_id(id: str, body: dict) -> str:
     """Update UiConfig.
 
     PUT /api/v3/config/ui/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/config/ui/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/config/ui/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_customfilter_by_id(id_: str, body: dict) -> str:
+def update_customfilter_by_id(id: str, body: dict) -> str:
     """Update CustomFilter.
 
     PUT /api/v3/customfilter/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/customfilter/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/customfilter/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2500,42 +2500,42 @@ def update_customformat_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_customformat_by_id(id_: str, body: dict) -> str:
+def update_customformat_by_id(id: str, body: dict) -> str:
     """Update CustomFormat.
 
     PUT /api/v3/customformat/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/customformat/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/customformat/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_delayprofile_by_id(id_: str, body: dict) -> str:
+def update_delayprofile_by_id(id: str, body: dict) -> str:
     """Update DelayProfile.
 
     PUT /api/v3/delayprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/delayprofile/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/delayprofile/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_delayprofile_reorder_by_id(id_: int, after: int | None = None) -> str:
+def update_delayprofile_reorder_by_id(id: int, after: int | None = None) -> str:
     """Update DelayProfile.
 
     PUT /api/v3/delayprofile/reorder/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         after: Query parameter.
     """
-    return call("PUT", f"/api/v3/delayprofile/reorder/{id_}", query={"after": after}, body=None, form=None)
+    return call("PUT", f"/api/v3/delayprofile/reorder/{id}", query={"after": after}, body=None, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2551,30 +2551,30 @@ def update_downloadclient_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_downloadclient_by_id(id_: int, body: dict, force_save: bool | None = None) -> str:
+def update_downloadclient_by_id(id: int, body: dict, force_save: bool | None = None) -> str:
     """Update DownloadClient.
 
     PUT /api/v3/downloadclient/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         force_save: Query parameter.
     """
-    return call("PUT", f"/api/v3/downloadclient/{id_}", query={"forceSave": force_save}, body=body, form=None)
+    return call("PUT", f"/api/v3/downloadclient/{id}", query={"forceSave": force_save}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_exclusions_by_id(id_: str, body: dict) -> str:
+def update_exclusions_by_id(id: str, body: dict) -> str:
     """Update ImportListExclusion.
 
     PUT /api/v3/exclusions/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/exclusions/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/exclusions/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2590,17 +2590,17 @@ def update_importlist_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_importlist_by_id(id_: int, body: dict, force_save: bool | None = None) -> str:
+def update_importlist_by_id(id: int, body: dict, force_save: bool | None = None) -> str:
     """Update ImportList.
 
     PUT /api/v3/importlist/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         force_save: Query parameter.
     """
-    return call("PUT", f"/api/v3/importlist/{id_}", query={"forceSave": force_save}, body=body, form=None)
+    return call("PUT", f"/api/v3/importlist/{id}", query={"forceSave": force_save}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2616,45 +2616,45 @@ def update_indexer_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_indexer_by_id(id_: int, body: dict, force_save: bool | None = None) -> str:
+def update_indexer_by_id(id: int, body: dict, force_save: bool | None = None) -> str:
     """Update Indexer.
 
     PUT /api/v3/indexer/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         force_save: Query parameter.
     """
-    return call("PUT", f"/api/v3/indexer/{id_}", query={"forceSave": force_save}, body=body, form=None)
+    return call("PUT", f"/api/v3/indexer/{id}", query={"forceSave": force_save}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_metadata_by_id(id_: int, body: dict, force_save: bool | None = None) -> str:
+def update_metadata_by_id(id: int, body: dict, force_save: bool | None = None) -> str:
     """Update Metadata.
 
     PUT /api/v3/metadata/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         force_save: Query parameter.
     """
-    return call("PUT", f"/api/v3/metadata/{id_}", query={"forceSave": force_save}, body=body, form=None)
+    return call("PUT", f"/api/v3/metadata/{id}", query={"forceSave": force_save}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_movie_by_id(id_: str, body: dict, move_files: bool | None = None) -> str:
+def update_movie_by_id(id: str, body: dict, move_files: bool | None = None) -> str:
     """Update Movie.
 
     PUT /api/v3/movie/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         move_files: Query parameter.
     """
-    return call("PUT", f"/api/v3/movie/{id_}", query={"moveFiles": move_files}, body=body, form=None)
+    return call("PUT", f"/api/v3/movie/{id}", query={"moveFiles": move_files}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2682,16 +2682,16 @@ def update_moviefile_bulk(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_moviefile_by_id(id_: str, body: dict) -> str:
+def update_moviefile_by_id(id: str, body: dict) -> str:
     """Update MovieFile.
 
     PUT /api/v3/moviefile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/moviefile/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/moviefile/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2707,30 +2707,30 @@ def update_moviefile_editor(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_notification_by_id(id_: int, body: dict, force_save: bool | None = None) -> str:
+def update_notification_by_id(id: int, body: dict, force_save: bool | None = None) -> str:
     """Update Notification.
 
     PUT /api/v3/notification/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
         force_save: Query parameter.
     """
-    return call("PUT", f"/api/v3/notification/{id_}", query={"forceSave": force_save}, body=body, form=None)
+    return call("PUT", f"/api/v3/notification/{id}", query={"forceSave": force_save}, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_qualitydefinition_by_id(id_: str, body: dict) -> str:
+def update_qualitydefinition_by_id(id: str, body: dict) -> str:
     """Update QualityDefinition.
 
     PUT /api/v3/qualitydefinition/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/qualitydefinition/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/qualitydefinition/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
@@ -2746,52 +2746,52 @@ def update_qualitydefinition_update(body: dict) -> str:
 
 
 @mcp.tool(annotations=_WRITE)
-def update_qualityprofile_by_id(id_: str, body: dict) -> str:
+def update_qualityprofile_by_id(id: str, body: dict) -> str:
     """Update QualityProfile.
 
     PUT /api/v3/qualityprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/qualityprofile/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/qualityprofile/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_releaseprofile_by_id(id_: str, body: dict) -> str:
+def update_releaseprofile_by_id(id: str, body: dict) -> str:
     """Update ReleaseProfile.
 
     PUT /api/v3/releaseprofile/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/releaseprofile/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/releaseprofile/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_remotepathmapping_by_id(id_: str, body: dict) -> str:
+def update_remotepathmapping_by_id(id: str, body: dict) -> str:
     """Update RemotePathMapping.
 
     PUT /api/v3/remotepathmapping/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/remotepathmapping/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/remotepathmapping/{id}", query=None, body=body, form=None)
 
 
 @mcp.tool(annotations=_WRITE)
-def update_tag_by_id(id_: str, body: dict) -> str:
+def update_tag_by_id(id: str, body: dict) -> str:
     """Update Tag.
 
     PUT /api/v3/tag/{id}
 
     Args:
-        id_: Path parameter.
+        id: Path parameter.
         body: Request payload. Read the matching GET or the /schema endpoint first to see the fields this resource expects.
     """
-    return call("PUT", f"/api/v3/tag/{id_}", query=None, body=body, form=None)
+    return call("PUT", f"/api/v3/tag/{id}", query=None, body=body, form=None)
